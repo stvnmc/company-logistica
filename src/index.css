@@ -31,11 +31,12 @@ a:hover {
 
 body {
   min-width: 320px;
+  font-size: 20px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
 }
 
@@ -63,12 +64,12 @@ button:focus-visible {
 
 header {
   display: flex;
-  padding: 0 2vw;
+  padding: 0 1vw;
   width: 95vw;
   height: 10vh;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 header h1 {
@@ -89,7 +90,6 @@ header ul li {
 
 .presentation {
   width: 99vw;
-  font-size: 20px;
 }
 
 .presentation-text {
@@ -104,6 +104,7 @@ header ul li {
 .presentation-text h1 {
   width: 63vw;
   margin-bottom: 3vh;
+  font-size: 4em;
 }
 
 .presentation-text p {
@@ -115,21 +116,24 @@ header ul li {
   display: flex;
   justify-content: space-between;
   height: 12vh;
-  padding: 0 2vw;
+  width: 96vw;
+  padding: 0 3vw;
 }
 
 .companys div {
   display: flex;
   align-items: center;
+  width: 19%;
+  flex-wrap: wrap;
 }
 
 .companys div svg {
   margin-right: 1.5vw;
-  font-size: 51px;
+  font-size: 2em;
 }
 
 .our-services {
-  height: 100vh;
+  height: auto;
   width: 99vw;
 }
 
@@ -152,15 +156,20 @@ header ul li {
 
 .our-services .content {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 97vw;
 }
 
 .our-services .content div {
   width: 30vw;
+  min-width: 200px;
   height: 40vh;
-  margin: 0 2vw;
+  margin: 2vw;
   border-radius: 5px;
   display: flex;
-  background-color: rgb(69, 71, 71);
+  background-color: rgb(177 188 188);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -177,13 +186,17 @@ header ul li {
 
 .us {
   display: flex;
-  height: 60vh;
+  height: auto;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 8vh;
 }
 
 .us .texto {
   width: 37vw;
+  min-width: 300px;
+  margin-bottom: 3vh;
 }
 
 .us .texto h1 {
@@ -192,6 +205,7 @@ header ul li {
 
 .us .cont-img img {
   width: 40vw;
+  min-width: 300px;
 }
 
 /* //////////why-choose-us /////////// */
@@ -214,6 +228,9 @@ header ul li {
 .why-choose-us .contents {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .why-choose-us .content {
@@ -221,9 +238,9 @@ header ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 31vh;
-  width: 279px;
-  margin: 0 4vw;
+  width: 20vw;
+  min-width: 150px;
+  margin: 2vh 4vw;
   justify-content: space-between;
 }
 
@@ -235,6 +252,11 @@ header ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.why-choose-us .content h1 {
+  margin-bottom: 2vh;
 }
 
 /* //////////// footer ///////// */
@@ -249,6 +271,7 @@ header ul li {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -292,4 +315,19 @@ header ul li {
 
 .social-links a:hover {
   color: #ccc;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  .companys div h2 {
+    display: none;
+  }
+
+  .why-choose-us .content .num {
+    width: 35px;
+    height: 35px;
+  }
 }
