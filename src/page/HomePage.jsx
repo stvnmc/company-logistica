@@ -26,6 +26,54 @@ const HomePage = () => {
     },
   ];
 
+  const listaWhyChooseUs = [
+    {
+      num: "1",
+      title: "motivo#1",
+      texto:
+        "dsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd fdsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd f dssadasdasd",
+    },
+    {
+      num: "2",
+      title: "motivo#2",
+      texto:
+        "dsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd fdsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd f dssadasdasd",
+    },
+    {
+      num: "3",
+      title: "motivo#3",
+      texto:
+        "dsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd fdsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd f dssadasdasd",
+    },
+  ];
+
+  const listaCompanys = [
+    {
+      icon: BiStoreAlt,
+      title: "Logoipsum",
+    },
+
+    {
+      icon: BiSpa,
+      title: "Logoipsum",
+    },
+
+    {
+      icon: BiSolidTruck,
+      title: "Logoipsum",
+    },
+
+    {
+      icon: BiSolidPlaneLand,
+      title: "Logoipsum",
+    },
+
+    {
+      icon: BiSolidPackage,
+      title: "Logoipsum",
+    },
+  ];
+
   return (
     <main>
       <div className="presentation">
@@ -38,26 +86,12 @@ const HomePage = () => {
           <button>Call To Action</button>
         </div>
         <div className="companys">
-          <div>
-            <BiStoreAlt />
-            <h2>Logoipsum </h2>
-          </div>
-          <div>
-            <BiSpa />
-            <h2>Logoipsum </h2>
-          </div>
-          <div>
-            <BiSolidTruck />
-            <h2>Logoipsum </h2>
-          </div>
-          <div>
-            <BiSolidPlaneLand />
-            <h2>Logoipsum </h2>
-          </div>
-          <div>
-            <BiSolidPackage />
-            <h2>Logoipsum </h2>
-          </div>
+          {listaCompanys.map((item, i) => (
+            <div key={i}>
+              {<item.icon />}
+              <h2>{item.title} </h2>
+            </div>
+          ))}
         </div>
       </div>
       <div className="our-services">
@@ -101,6 +135,18 @@ const HomePage = () => {
               "https://images.pexels.com/photos/1095814/pexels-photo-1095814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             }
           />
+        </div>
+      </div>
+      <div className="why-choose-us">
+        <h1>POR QUE ELEGIRNOS?</h1>
+        <div className="contents">
+          {listaWhyChooseUs.map((item, i) => (
+            <div key={i} className="content">
+              <h2 className="num">{item.num}</h2>
+              <h1>{item.title}</h1>
+              <p>{item.texto}</p>
+            </div>
+          ))}
         </div>
       </div>
     </main>
