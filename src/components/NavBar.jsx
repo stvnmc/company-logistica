@@ -5,10 +5,18 @@ const NavBar = () => {
     <header>
       <h1>Logo</h1>
       <ul>
-        <li>Item #1</li>
-        <li>Item #2</li>
-        <li>Item #3</li>
-        <li>Item #4</li>
+        <a>
+          <li>Home</li>
+        </a>
+        <a>
+          <li>Item #2</li>
+        </a>
+        <a>
+          <li>Item #3</li>
+        </a>
+        <a>
+          <li>Item #4</li>
+        </a>
       </ul>
       <button>Call To Action</button>
     </header>

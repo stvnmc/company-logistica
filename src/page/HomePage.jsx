@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // icons
 import { BiStoreAlt } from "react-icons/bi";
@@ -74,10 +74,29 @@ const HomePage = () => {
     },
   ];
 
+  const images = [
+    "https://images.pexels.com/photos/1095814/pexels-photo-1095814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/16128702/pexels-photo-16128702/free-photo-of-mar-nublado-oceano-industria.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Cambiar la imagen cada 5 segundos (5000 milisegundos)
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main>
       <div className="presentation">
-        <div className="presentation-text">
+        <div
+          className="presentation-text"
+          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+        >
           <h1>Texto sobre la promesa de tu negocio</h1>
           <p>
             Descripcion sobre lo que se dedica tu empresa y como ofreces
