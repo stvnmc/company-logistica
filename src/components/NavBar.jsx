@@ -14,9 +14,6 @@ const NavBar = () => {
         <a>
           <li>Item #3</li>
         </a>
-        <a>
-          <li>Item #4</li>
-        </a>
       </ul>
       <button>Call To Action</button>
     </header>

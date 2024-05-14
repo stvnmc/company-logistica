@@ -31,19 +31,19 @@ const HomePage = () => {
       num: "1",
       title: "motivo#1",
       texto:
-        "dsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd fdsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd f dssadasdasd",
+        "el movito por el cual deberia de utilizar el servicio que ofrecen en la pagina weeb",
     },
     {
       num: "2",
       title: "motivo#2",
       texto:
-        "dsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd fdsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd f dssadasdasd",
+        "el movito por el cual deberia de utilizar el servicio que ofrecen en la pagina weeb",
     },
     {
       num: "3",
       title: "motivo#3",
       texto:
-        "dsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd fdsffsdfs dfsf sd fdsffsdfs dfsf sd f dsffsdfs dfsf sd f dssadasdasd",
+        "el movito por el cual deberia de utilizar el servicio que ofrecen en la pagina weeb",
     },
   ];
 
@@ -149,11 +149,9 @@ const HomePage = () => {
           </p>
         </div>
         <div className="cont-img">
-          <img
-            src={
-              "https://images.pexels.com/photos/1095814/pexels-photo-1095814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            }
-          />
+          <div
+            style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+          ></div>
         </div>
       </div>
       <div className="why-choose-us">

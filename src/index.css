@@ -46,9 +46,11 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: #f5ecec;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #c0c1c4;
 }
 
 button:focus,
@@ -100,17 +102,9 @@ header ul li {
   background-size: cover;
   background-position: center;
   transition: background-image 0.5s ease-in-out;
-  animation: fadeInOut 8s infinite;
-}
-@keyframes fadeInOut {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  10%,
-  90% {
-    opacity: 1;
-  }
+  border-radius: 14px;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 1.5);
+  color: #ebebeb;
 }
 
 .presentation-text h1 {
@@ -121,6 +115,7 @@ header ul li {
 
 .presentation-text p {
   width: 37vw;
+  font-size: 1.3em;
   margin-bottom: 3vh;
 }
 
@@ -129,17 +124,18 @@ header ul li {
   justify-content: space-between;
   height: 12vh;
   width: 96vw;
-  padding: 0 3vw;
-  overflow: hidden; /* Para ocultar los elementos fuera del contenedor */
+
+  overflow: hidden;
   position: relative;
 }
 
 .companys div {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 19%;
   flex-wrap: wrap;
-  width: 20%; /* Ancho del elemento hijo */
+  width: 20%;
   float: left;
 }
 
@@ -157,6 +153,10 @@ header ul li {
 .companys div svg {
   margin-right: 1.5vw;
   font-size: 2em;
+}
+
+.companys div h2 {
+  font-size: 1.4em;
 }
 
 .our-services {
@@ -196,10 +196,17 @@ header ul li {
   margin: 2vw;
   border-radius: 5px;
   display: flex;
-  background-color: rgb(177 188 188);
+  background-color: rgb(71 73 73);
   flex-direction: column;
+  color: #fff;
   align-items: center;
   justify-content: center;
+}
+
+.our-services .content div:hover {
+  background-color: #bdb6b6;
+  color: #1a1a1a;
+  transition: 1s;
 }
 
 .our-services .content div h2,
@@ -230,9 +237,15 @@ header ul li {
   margin-bottom: 6vh;
 }
 
-.us .cont-img img {
+.us .cont-img div {
   width: 40vw;
+  height: 41vh;
   min-width: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  border-radius: 14px;
+  box-shadow: 4px 10px 17px 0px rgba(0,0,0,0.75);
 }
 
 /* //////////why-choose-us /////////// */
